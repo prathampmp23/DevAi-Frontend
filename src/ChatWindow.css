@@ -1,0 +1,320 @@
+/* ===============================
+   GLOBAL CHAT WINDOW
+================================ */
+
+.chatWindow {
+  background:
+    /* radial-gradient(circle at top, rgba(255, 255, 255, 0.14), transparent 60%), */
+    radial-gradient(
+      circle at bottom,
+      rgb(43, 43, 43),
+      transparent 30%
+    ),
+    #000000;
+  color: white;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+
+.navbar {
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background: transparent;
+  backdrop-filter: blur(2px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar span {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* ===============================
+   USER ICON
+================================ */
+
+.userIconDiv {
+  cursor: pointer;
+}
+
+.userIcon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(68, 68, 68);
+  border-radius: 50%;
+  box-shadow: inset 2px 2px 20px rgb(78, 78, 78);
+  transition: 0.2s ease;
+}
+
+.userIcon:hover {
+  transform: scale(1.08);
+}
+
+/* ===============================
+   CHAT INPUT SECTION
+================================ */
+
+.chatInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* ===============================
+   INPUT BOX
+================================ */
+
+.inputBox {
+  width: 100%;
+  max-width: 800px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 28px;
+
+  backdrop-filter: blur(14px);
+
+  transition: 0.2s;
+}
+
+.inputBox:focus-within {
+  border-color: #3b82f6;
+
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* ===============================
+   INPUT
+================================ */
+
+.inputBox input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 0.95rem;
+
+  padding: 18px 65px 18px 24px;
+}
+
+.inputBox input::placeholder {
+  color: #9ca3af;
+}
+
+/* ===============================
+   SEND BUTTON
+================================ */
+
+#submit {
+  position: absolute;
+  right: 10px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: rgb(255, 255, 255);
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+#submit:hover {
+  transform: scale(1.08);
+}
+
+#submit i {
+  color: rgb(0, 0, 0);
+}
+
+/* ===============================
+   FOOTER INFO
+================================ */
+
+.info {
+  /* margin-top: 1rem; */
+
+  color: #9ca3af;
+
+  font-size: 0.8rem;
+
+  text-align: center;
+}
+
+/* ===============================
+   DROPDOWN
+================================ */
+
+.dropDown {
+  position: absolute;
+
+  top: 75px;
+  right: 30px;
+
+  width: 220px;
+
+  background: rgba(14, 14, 14, 0.95);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+
+  z-index: 1000;
+}
+
+/* ===============================
+   DROPDOWN ITEMS
+================================ */
+
+.dropDownItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+
+  cursor: pointer;
+
+  font-size: 0.95rem;
+
+  transition: 0.15s;
+}
+
+.dropDownItem:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ===============================
+   LOADER
+================================ */
+
+.loaderWrapper {
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+
+* {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .chatInput {
+    padding: 1rem;
+  }
+
+  .inputBox {
+    border-radius: 22px;
+  }
+
+  .dropDown {
+    right: 10px;
+    width: 190px;
+  }
+
+  .info {
+    font-size: 0.75rem;
+  }
+}
+
+.loaderWrapper {
+  position: fixed;
+
+  bottom: 120px;
+
+  left: 60%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem 1.5rem;
+
+  /* background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.08); */
+
+  border-radius: 20px;
+
+
+  z-index: 1000;
+}

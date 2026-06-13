@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
+
+.chats {
+  overflow-y: auto;
+  padding: 8rem;
+}
+
+/* USER */
+
+.userDiv {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.userMessage {
+  background-color: #323232;
+  padding: 12px 20px;
+  border-radius: 16px;
+  max-width: 500px;
+  width: fit-content;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.newChatHeading {
+  margin-top: 120px; /* adjust as needed */
+  margin-bottom: auto;
+
+  font-size: 2.5rem;
+  font-weight: 600;
+
+  color: #fff;
+
+  text-align: center;
+}
+
+/* GPT */
+
+.gptDiv {
+  text-align: left;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* MARKDOWN BODY */
+
+.markdown-body {
+  color: #ececec;
+}
+
+/* PARAGRAPHS */
+
+.markdown-body p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+/* HEADINGS */
+
+.markdown-body h1 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+}
+
+.markdown-body h2 {
+  font-size: 1.6rem;
+  margin: 1.75rem 0 1rem;
+}
+
+.markdown-body h3 {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 0.8rem;
+}
+
+.markdown-body h4 {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+/* LISTS */
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+.markdown-body li {
+  margin-bottom: 0.5rem;
+}
+
+/* INLINE CODE */
+
+.markdown-body code:not(pre code) {
+  background: #2d2d2d;
+  color: #f8a73c;
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* CODE BLOCKS */
+
+.hljs {
+  border-radius: 14px !important;
+}
+
+.markdown-body pre {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 18px;
+  margin: 1rem 0;
+
+  overflow-x: auto;
+
+  font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.markdown-body pre code {
+  white-space: pre;
+  display: block;
+}
+
+/* TABLES */
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  display: block;
+  overflow-x: auto;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid #444;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.markdown-body th {
+  background: #2b2b2b;
+  font-weight: 600;
+}
+
+.markdown-body tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* BLOCKQUOTE */
+
+.markdown-body blockquote {
+  border-left: 4px solid #666;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #b0b0b0;
+}
+
+/* LINKS */
+
+.markdown-body a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+/* IMAGES */
+
+.markdown-body img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+/* HR */
+
+.markdown-body hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 2rem 0;
+}
+
+/* ARCHITECTURE / ASCII DIAGRAMS */
+
+.markdown-body pre {
+  white-space: pre;
+}
+
+/* SCROLLBAR */
+
+.markdown-body pre::-webkit-scrollbar,
+.markdown-body table::-webkit-scrollbar {
+  height: 8px;
+}
+
+.markdown-body pre::-webkit-scrollbar-thumb,
+.markdown-body table::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+/* SELECTION */
+
+::selection {
+  background-color: rgba(59, 130, 246, 0.3);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .chats {
+    padding: 2rem;
+  }
+
+  .userMessage {
+    max-width: 90%;
+  }
+
+  .markdown-body h1 {
+    font-size: 1.7rem;
+  }
+
+  .markdown-body h2 {
+    font-size: 1.4rem;
+  }
+
+  .markdown-body h3 {
+    font-size: 1.2rem;
+  }
+}
