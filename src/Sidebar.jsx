@@ -115,9 +115,9 @@ function Sidebar() {
 
       <div className="sign">
         <p>
-          By{" "}
+          Code By{" "}
           <b>
-            <a href="https://github.com/prathampmp23">Pratham Potdar</a>
+            <a href="https://github.com/prathampmp23">Pratham</a>
           </b>
         </p>
       </div>
