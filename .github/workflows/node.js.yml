@@ -10,7 +10,7 @@ on:
 jobs:
   build:
 
-    runs-on: sessh -i "prod-key-pair.pem" ubuntu@ec2-51-20-31-28.eu-north-1.compute.amazonaws.comlf-hosted
+    runs-on: self-hosted
 
     strategy:
       matrix:
