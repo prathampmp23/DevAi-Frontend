@@ -17,6 +17,7 @@ function Sidebar() {
 
   const getAllThreads = async () => {
     try {
+      // const response = await fetch("http://localhost:8080/api/thread");
       const response = await fetch("http://ec2-51-20-31-28.eu-north-1.compute.amazonaws.com:8080/api/thread");
       const res = await response.json();
       const filteredData = res.map((thread) => ({
@@ -47,7 +48,7 @@ function Sidebar() {
 
     try {
       const response = await fetch(
-        `http://ec2-51-20-31-28.eu-north-1.compute.amazonaws.com:8080/api/thread/${newThreadId}`,
+        `http://localhost:8080/api/thread/${newThreadId}`,
       );
       const res = await response.json();
       console.log(res);
@@ -62,7 +63,7 @@ function Sidebar() {
   const deleteThread = async (threadId) => {
     try {
       const response = await fetch(
-        `http://ec2-51-20-31-28.eu-north-1.compute.amazonaws.com:8080/api/thread/${threadId}`,
+        `http://localhost:8080/api/thread/${threadId}`,
         { method: "DELETE" },
       );
       const res = await response.json();
@@ -84,11 +85,7 @@ function Sidebar() {
   return (
     <section className="sidebar">
       <button onClick={createNewChat}>
-        <img
-          src="src/assets/logo.jpeg"
-          alt="gpt logo"
-          className="logo"
-        ></img>
+        <img src="src/assets/logo.jpeg" alt="gpt logo" className="logo"></img>
         <span>
           <i className="fa-solid fa-pen-to-square"></i>
         </span>
